@@ -95,10 +95,10 @@ namespace Minigame.Presentation
     
         private void RemoveEvents()
         {
-            _clawController.OnVerticalClawMovementCompleteEvent += OnVerticalClawMovementComplete;
-            OnVerticalClawMovementCompleteEvent += View.OnVerticalClawMovementComplete;
-            OnGameButtonClickedEvent += _clawController.OnGameButtonClick;
-            OnStickMovedEvent += _clawController.OnStickMoved;
+            _clawController.OnVerticalClawMovementCompleteEvent -= OnVerticalClawMovementComplete;
+            OnVerticalClawMovementCompleteEvent -= View.OnVerticalClawMovementComplete;
+            OnGameButtonClickedEvent -= _clawController.OnGameButtonClick;
+            OnStickMovedEvent -= _clawController.OnStickMoved;
         }
         
         #endregion
