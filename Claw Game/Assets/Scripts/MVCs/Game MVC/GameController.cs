@@ -99,12 +99,12 @@ namespace Minigame.Presentation
 
         private void DeInitializeScoreBoardMVC()
         {
-            _cpController.DeInit();
+            _spController.DeInit();
         }
 
         private void DeInitializeControllerPanelMVC()
         {
-            _spController.DeInit();
+            _cpController.DeInit();
         }
         
         #endregion
@@ -151,8 +151,8 @@ namespace Minigame.Presentation
         }
         private void RemoveEvents()
         {
-            OnVerticalClawMovementCompleteEvent -= _gpController.OnVerticalClawMovementComplete; 
-            _spController.OnClawVerticalMovementCompleteEvent -= OnVerticalClawMovementComplete;
+            OnVerticalClawMovementCompleteEvent -= _spController.OnVerticalClawMovementComplete;
+            _gpController.OnVerticalClawMovementCompleteEvent -= OnVerticalClawMovementComplete;
             OnStickMovedEvent -= _gpController.OnStickMoved;
             _cpController.OnStickMovedEvent -= OnStickMoved;
             OnGameButtonClickedEvent -= _gpController.OnGameButtonClick;
